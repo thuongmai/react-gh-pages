@@ -183,9 +183,9 @@ npm install gh-pages --save-dev
 - Commit the code and push it
 - Type ```npm run deploy``` to build the app (it will display on the link homepage above, no commit needed)
 
-NOTE: 
-- don't switch branch to gh-pages or it will mess up. If do, don't commit anything on that branch. ONLY COMMIT MASTER BRANCH
-- Whenever update the code, don't forget to type "npm run deploy" to update the latest product to the homepage 
+### NOTE: 
+- don't switch branch to **gh-pages** or it will mess up. If do, don't commit anything on that branch. ONLY COMMIT **MASTER BRANCH**
+- Whenever update the code, don't forget to type ```npm run deploy``` to update the latest product to the homepage 
 
 # References
 
