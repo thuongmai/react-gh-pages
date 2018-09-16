@@ -138,6 +138,54 @@ The remainder of this document contains a tutorial on creating a React app (usin
 
     * I recommend exploring the GitHub repository once again at this point. When I did that, I noticed that a `master` branch now existed, and it contained the app's source code.
     * So, the `master` branch held the source code, and the `gh-pages` branch held the *built* app code.
+    
+## My Way
+- install react
+```sh
+npm install -g create-react-app
+```
+
+- install tachyons
+```sh
+npm install tachyons
+```
+
+- create project
+```sh
+create-react-app hello-world
+```
+
+- install redux
+```sh
+npm install redux
+npm install react-redux
+```
+
+### Add React to Github Desktop
+- Create empty repo (no gitignore, no readme). Ex: Friends
+- Use Github Desktop to clone it with a name friends_project (no uppercase)
+- Use npm and type "create-react-app friends_project" 
+- Then type 
+```sh
+cd friends_project
+npm install gh-pages --save-dev
+```
+- Open package.json, add these
+	+ (after "private") => 
+    ```
+    "homepage": "http://thuongmai.github.io/Friends/",
+    ```
+	+ (after "test") =>
+    ```
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    ```
+- Commit the code and push it
+- Type ```npm run deploy``` to build the app (it will display on the link homepage above, no commit needed)
+
+NOTE: 
+- don't switch branch to gh-pages or it will mess up. If do, don't commit anything on that branch. ONLY COMMIT MASTER BRANCH
+- Whenever update the code, don't forget to type "npm run deploy" to update the latest product to the homepage 
 
 # References
 
